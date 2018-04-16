@@ -1,0 +1,39 @@
+[Preset.0]
+Name=New Preset
+Active=1
+PresetSwitchIgnore=0
+Name0=Scene Select Bank
+Incoming0=MID3<Incoming Action="MIDI"><Simple Type="NoteOn"><Channel num="2"/><Value1 num="0x00"/><Value2 num="0x00" Type="Any"/></Simple></Incoming>
+Outgoing0=MID3<Outgoing Action="MIDI"><Simple Type="BankChange"><Channel num="0"/><Value1 num="0x00"/><Value2 num="0x7F"/></Simple></Outgoing>
+Options0=Actv01Stop00OutO00
+Name1=Scene Select Channel
+Incoming1=MID3<Incoming Action="MIDI"><Simple Type="NoteOn"><Channel num="2"/><Value1 num="0x00"/><Value2 var="oo" Type="SetVar"/></Simple></Incoming>
+Outgoing1=MID3<Outgoing Action="MIDI"><Simple Type="ProgramChange"><Channel num="2"/><Value1 var="oo"/></Simple></Outgoing>
+Options1=Actv01Stop01OutO00
+Name2=Mute Channel Note On
+Incoming2=MID3<Incoming Action="MIDI"><Simple Type="NoteOn"><Channel num="2"/><Value1 num="0x01"/><Value2 var="oo" Type="SetVar"/></Simple></Incoming>
+Outgoing2=MID3<Outgoing Action="MIDI"><Simple Type="NoteOn"><Channel num="2"/><Value1 var="oo"/><Value2 num="0x7F"/></Simple></Outgoing>
+Options2=Actv01Stop00OutO00
+Name3=Mute Channel Note Off
+Incoming3=MID3<Incoming Action="MIDI"><Simple Type="NoteOn"><Channel num="2"/><Value1 num="0x01"/><Value2 var="oo" Type="SetVar"/></Simple></Incoming>
+Outgoing3=MID3<Outgoing Action="MIDI"><Simple Type="NoteOff"><Channel num="2"/><Value1 var="oo"/><Value2 num="0x00"/></Simple></Outgoing>
+Options3=Actv01Stop00OutO00Dlay10:Millis
+Name4=Unmute Channel Note On
+Incoming4=MID3<Incoming Action="MIDI"><Simple Type="NoteOn"><Channel num="2"/><Value1 num="0x02"/><Value2 var="oo" Type="SetVar"/></Simple></Incoming>
+Outgoing4=MID3<Outgoing Action="MIDI"><Simple Type="NoteOn"><Channel num="2"/><Value1 var="oo"/><Value2 num="0x3F"/></Simple></Outgoing>
+Options4=Actv01Stop00OutO00
+Name5=Unmute Channel Note Off
+Incoming5=MID3<Incoming Action="MIDI"><Simple Type="NoteOn"><Channel num="2"/><Value1 num="0x02"/><Value2 var="oo" Type="SetVar"/></Simple></Incoming>
+Outgoing5=MID3<Outgoing Action="MIDI"><Simple Type="NoteOff"><Channel num="2"/><Value1 var="oo"/><Value2 num="0x00"/></Simple></Outgoing>
+Options5=Actv01Stop00OutO00Dlay10:Millis
+
+[Project]
+Version=2
+Author=
+AuthorContact=
+Comments=
+AuthorWWW=
+AuthorCopyright=
+DefaultInPorts=MIDA00010021Bome MIDI Translator 1 Virtual In
+DefaultOutPorts=MIDA0001000BAH TCP MIDI
+
